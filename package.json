@@ -1,0 +1,23 @@
+{
+  "name": "project-restaurant-page",
+  "version": "1.0.0",
+  "description": "the odin project - javascript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lance28-beep/Project-Restaurant-Page.git"
+  },
+  "author": "Lance Valle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lance28-beep/Project-Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/lance28-beep/Project-Restaurant-Page#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
