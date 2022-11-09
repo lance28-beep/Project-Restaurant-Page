@@ -9,30 +9,27 @@ font-family: 'Poiret One', cursive;
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 4rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(19, 64%, 54%);
-  --first-color-alt: hsl(19, 64%, 52%);
-  --title-color: hsl(19, 16%, 15%);
-  --text-color: hsl(19, 16%, 35%);
-  --text-color-light: hsl(19, 8%, 55%);
-  --body-color: hsl(19, 100%, 96%);
-  --container-color: hsl(19, 100%, 97%);
+  --theme-color: #83200d;
+  --theme-color-alt: #a1270f;
+  --title-color: #ffffff;
+  --box-color: rgba(255, 255, 255, 0.54);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --title-font: "Lora", serif;
-  --subtitle-font: "Dancing Script", cursive;
+  --primary-font: 'Poiret One', cursive;
+  --secondary-font: 'Fredoka One', cursive;
+  --subtitle-font: 'Inter', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -41,4 +38,164 @@ font-family: 'Poiret One', cursive;
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--theme-color);
+  color: var(--text-color);
+  transition: background 0.4s; /* for dark mode animation */
+}
+
+h1 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+ul {
+  list-style: none;
+}
+
+/*=============== THEME ===============*/
+
+/*========== Variables Dark theme ==========*/
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--theme-color-alt);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: box-shadow 0.3s, background 0.4s;
+}
+
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle,
+.nav__close {
+  display: flex;
+  color: white;
+}
+
+.nav__logo {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 1.2rem;
+  padding: 8px;
+}
+
+.nav__logo-name {
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+}
+.nav__logo-subname {
+  font-size: 8px;
+  font-family: var(--subtitle-font);
+}
+.nav__toggle {
+  margin: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: var(--theme-color-alt);
+    width: 100%;
+    box-shadow: 0 8px 20px hsla(19, 64%, 24%, 0.1);
+    padding-block: 3.5rem;
+    transition: top 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: white;
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+  position: relative;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+.nav__link:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+/* .nav__link:after:hover {
+  width: 100%;
+} */
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.nav__close:hover {
+  color: var(--title-color);
+}
+
+
+/* show menu */
+.show-menu{
+  top:0;
 }

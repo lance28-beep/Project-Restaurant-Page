@@ -2,28 +2,57 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="style.css">
- <title>Document</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="style.css">
+
+   <title>Document</title>
 </head>
 
 <body>
- <header>
-  <div class="logo">
-   <h1>Chino & Baker</h1>
-   <p>ARTISAN BAKERY</p>
-   <div>
-    <nav>
-     <div>nav</div>
-     <ul>
-      <li></li>
-     </ul>
-    </nav>
- </header>
- <!-- <div id="content"></div> -->
- <script src="main.js"></script>
+   <header class="header" id="header">
+      <nav class="nav container">
+         <div class="nav__logo">
+            <h1 class="nav__logo-name">
+               Chino & Baker
+            </h1>
+            <p class="nav__logo-subname">
+               ARTISAN BAKERY
+            </p>
+         </div>
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#home" class="nav__link">Home</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#menu" class="nav__link">Menu</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#contact" class="nav__link">Contact</a>
+               </li>
+            </ul>
+            <!-- close button -->
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+         </div>
+         <div class="nav__buttons">
+            <!-- Theme change button -->
+            <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-2-line"></i>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <!-- <div id="content"></div> -->
+   <script src="main.js"></script>
 </body>
 
 </html>

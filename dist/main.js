@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const e=document.getElementById("nav-menu"),t=document.getElementById("nav-toggle"),n=document.getElementById("nav-close");t&&t.addEventListener("click",(()=>{e.classList.add("show-menu")})),n&&n.addEventListener("click",(()=>{e.classList.remove("show-menu")}))})()})();
