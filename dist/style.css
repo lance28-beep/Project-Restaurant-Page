@@ -162,7 +162,6 @@ a {
   align-items: center;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  margin: 1.2rem;
   padding: 8px;
 }
 
@@ -375,7 +374,7 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 1px 4px;
+  margin: 1px -4px;
   transition: scale 0.3s;
 }
 
@@ -439,6 +438,7 @@ a {
 
 .footer__content {
   grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem;
 }
 
 .footer__title {
@@ -478,4 +478,24 @@ a {
   margin-top: 6.5rem;
   flex-direction: column;
   row-gap: 1.5rem;
+}
+
+.footer__card {
+  column-gap: 6.5rem;
+  row-gap: 2.5rem;
+}
+
+.footer__card {
+  column-gap: 1rem;
+  justify-content: center;
+}
+
+.footer__card img {
+  width: 35px;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: white;
 }
