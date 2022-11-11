@@ -522,42 +522,75 @@ a {
   color: #fff;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+.swiper-slide {
+  background-color: white;
 }
 
-.swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
+.menu {
+  display: grid;
+  grid-template-rows: 150px auto;
+  gap: 5px;
+  justify-content: space-around;
 }
 
-.swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+.menu .menu_image {
+  height: 90px;
 }
 
-.swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
+.menu .menu_image img {
+  width: 100%;
+  height: auto;
 }
 
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
+.menu_description h1 {
+  font-size: 1.5rem;
+  color: #83200d;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
 }
 
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
+.menu_description p {
+  font-size: 0.8rem;
+  color: #83200d;
+  margin: 0 1rem;
+  margin-top: 1rem;
 }
 
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
+.button__container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  align-items: center;
 }
 
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
+.button__container .price {
+  font-size: 1rem;
+  margin: 0;
 }
 
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
+.button__container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: #83200d;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: background 0.4s;
 }
 
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
+.button__container button:hover {
+  background-color: #a1270f;
+}
+
+.button__container i {
+  font-size: 1.5rem;
+  transition: font-size 0.2s;
+}
+
+.button__container button:hover i {
+  font-size: 1.6rem;
 }
